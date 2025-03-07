@@ -393,6 +393,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7903626856f5a4b408580c590f65687a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxFuel: 500
+  currentFuel: 0
+  fuelBar: {fileID: 777483358}
+  idleFuelConsumption: 1
+  movingFuelConsumption: 2
 --- !u!1 &185443602
 GameObject:
   m_ObjectHideFlags: 0
