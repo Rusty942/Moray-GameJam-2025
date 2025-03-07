@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - MiniMap
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 871213253
+    locked: 0
+  - name: MiniMap
+    uniqueID: 1130115253
     locked: 0

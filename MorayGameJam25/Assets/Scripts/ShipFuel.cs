@@ -9,8 +9,8 @@ public class ShipFuel : MonoBehaviour
     public int currentFuel;
     public FuelBar fuelBar;
     
-    [SerializeField] private int idleFuelConsumption = 1;
-    [SerializeField] private int movingFuelConsumption = 2;
+    public int idleFuelConsumption = 1;
+    public int movingFuelConsumption = 2;
     
     private Rigidbody2D rb;
 
