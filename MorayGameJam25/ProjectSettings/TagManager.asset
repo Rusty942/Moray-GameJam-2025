@@ -57,3 +57,6 @@ TagManager:
   - name: MinimapShip
     uniqueID: 1606173609
     locked: 0
+  - name: Bartering top
+    uniqueID: 3113578877
+    locked: 0

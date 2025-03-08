@@ -7,6 +7,7 @@ public class SpicyText : MonoBehaviour
     public TextMeshPro tmp;
     public string fullText1;
     public string fullText2;
+    public string fullText3;
     public GameObject square;
     public TextMeshPro skip;
     public GameObject x;
@@ -19,7 +20,7 @@ public class SpicyText : MonoBehaviour
 
     void Start()
     {
-        dialogues = new string[] { fullText1, fullText2 };
+        dialogues = new string[] { fullText1, fullText2, fullText3 };
         ResetUI();
         StartCoroutine(RevealText(dialogues[dialogueIndex]));
     }
