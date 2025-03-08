@@ -8,17 +8,22 @@ public class SpaceshipController : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool facingRight = true;
+    
+    public AudioSource engineSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.drag = 0;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
         HandleMovement();
+        HandleEngineSound();
     }
 
     void HandleMovement()
@@ -44,6 +49,24 @@ public class SpaceshipController : MonoBehaviour
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
+    }
+    
+    void HandleEngineSound()
+    {
+        if (rb.velocity.magnitude > 0.1f)
+        {
+            if (!engineSound.isPlaying)
+            {
+                engineSound.Play();
+            }
+        }
+        else
+        {
+            if (engineSound.isPlaying)
+            {
+                engineSound.Stop();
+            }
         }
     }
 

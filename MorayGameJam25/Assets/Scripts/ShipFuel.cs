@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class ShipFuel : MonoBehaviour
 {
-    public int maxFuel = 500;
+    public int maxFuel = 100;
     public int currentFuel;
     public FuelBar fuelBar;
     
     public int idleFuelConsumption = 1;
-    public int movingFuelConsumption = 2;
+    public int movingFuelConsumption = 3;
     
     private Rigidbody2D rb;
 

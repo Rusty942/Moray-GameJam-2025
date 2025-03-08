@@ -54,3 +54,6 @@ TagManager:
   - name: MiniMap
     uniqueID: 1130115253
     locked: 0
+  - name: MinimapShip
+    uniqueID: 1606173609
+    locked: 0
