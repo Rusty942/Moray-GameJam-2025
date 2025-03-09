@@ -357,10 +357,10 @@ MonoBehaviour:
   onScreen: 0
   fill1: {fileID: 1693320739}
   fill2: {fileID: 137367221}
-  item1Value: 20
-  item2Value: 60
-  item1Name: FLAME CHILLI
-  item2Name: BOMB MUSHROOM
+  item1Value: 70
+  item2Value: 100
+  item1Name: MIST ALMOND
+  item2Name: RUST TEALEAF
   item1ammvis: {fileID: 1527677526}
   item2ammvis: {fileID: 854599741}
   item1NameTxt: {fileID: 1958361740}
@@ -1965,7 +1965,7 @@ SpriteRenderer:
   m_SortingLayerID: 1412060571
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b86fb1edc2db8f045b9b390015eddce4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a801d0d049e558b459b19ce19b28f0fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2927,7 +2927,7 @@ Transform:
   m_GameObject: {fileID: 1443133765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.638, y: 0.093, z: 0}
+  m_LocalPosition: {x: -2.8, y: 0.269, z: 0}
   m_LocalScale: {x: 0.062550575, y: 0.05683374, z: 0.08712044}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2974,7 +2974,7 @@ SpriteRenderer:
   m_SortingLayerID: -1078762473
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 572c30ab89700c043b4ea1071140bd3b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e76e043320305b44846b9943230ee88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3043,7 +3043,7 @@ SpriteRenderer:
   m_SortingLayerID: 871213253
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dddb339b04de5ee47b645cfcc0bcbef6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 17b6c87afd5cc574c8851f795b48ad14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3063,7 +3063,7 @@ Transform:
   m_GameObject: {fileID: 1462026212}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.69, y: -1.36, z: 0}
+  m_LocalPosition: {x: 5.92, y: -1.1, z: 0}
   m_LocalScale: {x: 0.35168865, y: 0.35168865, z: 0.35168865}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3386,7 +3386,7 @@ Transform:
   m_GameObject: {fileID: 1589374310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.66, y: -0.085, z: 0}
+  m_LocalPosition: {x: -2.72, y: -0.085, z: 0}
   m_LocalScale: {x: 0.06658582, y: 0.060500182, z: 0.09274074}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3433,7 +3433,7 @@ SpriteRenderer:
   m_SortingLayerID: -1078762473
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e9d33ca1e4d3d74cbb05d9e76245905, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc1d4ebec4a375a4e93be2b4d936b9ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3629,12 +3629,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmp: {fileID: 1608388708}
-  fullText1: Hey, new guy! Welcome to Picanteara! I'm Peppera, a representative of
-    the Chili Tribe.
-  fullText2: 'We are the most lively place in the universe! But... I have to remind
-    you, don''t make me angry, I have a bad temper, haha! '
-  fullText3: How do you control your emotions? I always feel like I get angry easily.
-    It's so annoying!
+  fullText1: Welcome to the Tartenia, traveler. I am Absinthe, and I belong to the
+    Wormwood Tribe.
+  fullText2: Our four tribes once lived on the Original Planet, which was the first
+    planet in the universe where the sense of taste was born.
+  fullText3: But as time went on, the sense of taste on the Original Planet began
+    to become unbalanced.
   skip: {fileID: 1435347509}
   x: {fileID: 453069750}
   continueTxt: {fileID: 1224950034}
