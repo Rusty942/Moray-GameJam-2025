@@ -61,3 +61,6 @@ TagManager:
   - name: Bartering top
     uniqueID: 3113578877
     locked: 0
+  - name: Bartering borders
+    uniqueID: 1817117737
+    locked: 0

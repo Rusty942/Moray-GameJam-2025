@@ -242,7 +242,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -281.17633, w: -110.43573}
+  m_margin: {x: 0, y: 0, z: -260.43915, w: -110.43573}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2141,6 +2141,7 @@ GameObject:
   - component: {fileID: 968576855}
   - component: {fileID: 968576860}
   - component: {fileID: 968576859}
+  - component: {fileID: 968576861}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2345,6 +2346,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &968576861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968576854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2647e5237e26f244f9a91d250b4eb544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amm: {fileID: 13398503}
 --- !u!1 &1160543795
 GameObject:
   m_ObjectHideFlags: 0

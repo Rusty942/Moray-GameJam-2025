@@ -9,7 +9,7 @@ public static class StartData
     static StartData()
     {
         playerSpawnLocation = new Vector3(0f, 0f, 0f);
-        currencyAmm = 50;
+        currencyAmm = 40;
         fuelAmm = 100;
     }
 }
