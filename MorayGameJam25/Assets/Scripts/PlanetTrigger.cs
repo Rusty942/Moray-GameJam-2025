@@ -4,6 +4,7 @@ public class PlanetTrigger : MonoBehaviour
 {
     public GameObject landingUi;
     private bool touchingPlanet = false;
+    private bool enterPlanet = false;
     public GameObject buttonFill;
     public string scene;
 
@@ -16,6 +17,7 @@ public class PlanetTrigger : MonoBehaviour
         if (touchingPlanet && Input.GetButtonDown("Submit"))
         {
             buttonFill.SetActive(true);
+            enterPlanet = true;
             SceneManager.LoadScene(scene);
         }
     }
@@ -30,11 +32,15 @@ public class PlanetTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && enterPlanet == false)
         {
             landingUi.SetActive(false);
             touchingPlanet = false;
             buttonFill.SetActive(false);
+        }
+        else
+        {
+
         }
     }
 }
