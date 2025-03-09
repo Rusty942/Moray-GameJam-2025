@@ -12,8 +12,15 @@ public class BarterBox : MonoBehaviour
     public GameObject fill2;
     public int item1Value;
     public int item2Value;
+    public string item1Name;
+    public string item2Name;
     public TextMeshPro item1ammvis;
     public TextMeshPro item2ammvis;
+    public TextMeshPro item1NameTxt;
+    public TextMeshPro item2NameTxt;
+    public AudioSource buttNoise;
+    public AudioSource errNoise;
+    public AudioSource buyNoise;
     private bool item1 = true;
 
     private void Start()
@@ -22,6 +29,8 @@ public class BarterBox : MonoBehaviour
         fill2.SetActive(false);
         item1ammvis.text = (item1Value.ToString());
         item2ammvis.text = (item2Value.ToString());
+        item1NameTxt.text = (item1Name.ToString());
+        item2NameTxt.text = (item2Name.ToString());
     }
 
     void Update()
@@ -29,6 +38,11 @@ public class BarterBox : MonoBehaviour
         if (Input.GetButtonDown("Cancel") && onScreen == true)
         {
             SceneManager.LoadScene("Space");
+            foreach (string ingredient in StartData.ingredients)
+            {
+                Debug.Log("Ingredient: " + ingredient);
+            }
+
         }
         float verticalInput = Input.GetAxis("Vertical");
         if (verticalInput < 0 && item1)
@@ -36,12 +50,14 @@ public class BarterBox : MonoBehaviour
             item1 = false;
             fill1.SetActive(false);
             fill2.SetActive(true);
+            buttNoise.Play();
         }
         else if (verticalInput > 0 && !item1)
         {
             item1 = true;
             fill1.SetActive(true);
             fill2.SetActive(false);
+            buttNoise.Play();
         }
 
         if (Input.GetButtonDown("Jump")){
@@ -50,11 +66,13 @@ public class BarterBox : MonoBehaviour
                 int minus = StartData.currencyAmm - item1Value;
                 if ( minus < 0)
                 {
-                    
+                    errNoise.Play();
                 }
                 else
                 {
                     StartData.currencyAmm -= item1Value;
+                    buyNoise.Play();
+                    StartData.ingredients.Add(item1Name);
                 }
             }
             else
@@ -62,11 +80,13 @@ public class BarterBox : MonoBehaviour
                 int minus = StartData.currencyAmm - item2Value;
                 if (minus < 0)
                 {
-
+                    errNoise.Play();
                 }
                 else
                 {
                     StartData.currencyAmm -= item2Value;
+                    buyNoise.Play();
+                    StartData.ingredients.Add(item2Name);
                 }
 
             }
