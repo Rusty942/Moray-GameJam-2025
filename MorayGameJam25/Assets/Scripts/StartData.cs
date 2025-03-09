@@ -11,7 +11,7 @@ public static class StartData
     static StartData()
     {
         playerSpawnLocation = new Vector3(0f, 0f, 0f);
-        currencyAmm = 40;
+        currencyAmm = 100;
         fuelAmm = 100;
         ingredients = new List<string>();
     }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -38,6 +39,10 @@ public class BarterBox : MonoBehaviour
         if (Input.GetButtonDown("Cancel") && onScreen == true)
         {
             SceneManager.LoadScene("Space");
+            foreach (string item in StartData.ingredients)
+            {
+                Debug.Log(item);
+            }
         }
         float verticalInput = Input.GetAxis("Vertical");
         if (verticalInput < 0 && item1)
