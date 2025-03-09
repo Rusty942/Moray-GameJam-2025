@@ -64,3 +64,6 @@ TagManager:
   - name: Bartering borders
     uniqueID: 1817117737
     locked: 0
+  - name: Barter Icon
+    uniqueID: 3216204823
+    locked: 0
