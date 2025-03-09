@@ -38,11 +38,6 @@ public class BarterBox : MonoBehaviour
         if (Input.GetButtonDown("Cancel") && onScreen == true)
         {
             SceneManager.LoadScene("Space");
-            foreach (string ingredient in StartData.ingredients)
-            {
-                Debug.Log("Ingredient: " + ingredient);
-            }
-
         }
         float verticalInput = Input.GetAxis("Vertical");
         if (verticalInput < 0 && item1)

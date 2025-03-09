@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpicyPlanet.unity
     guid: d8f1d127082e6914da30230029e8d9c6
+  - enabled: 1
+    path: Assets/Scenes/Restaraunt.unity
+    guid: eae27319c83c2f84486dee5f8d9d72db
+  - enabled: 1
+    path: Assets/Scenes/SweetPlanet.unity
+    guid: ec4ce0be39ec8864b8ed8c71a4ee0262
+  - enabled: 1
+    path: Assets/Scenes/SourPlanet.unity
+    guid: 389a3ad3606a07749848cecf1c908fc0
+  - enabled: 1
+    path: Assets/Scenes/BitterPlanet.unity
+    guid: 7530cfb25dc25b64c98cf102516ace58
   m_configObjects: {}

@@ -9,6 +9,7 @@ public class PlanetTrigger : MonoBehaviour
     public string scene;
     public GameObject player;
     public ShipFuel shipFuel;
+    public AudioSource beep;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class PlanetTrigger : MonoBehaviour
     {
         if (touchingPlanet && Input.GetButtonDown("Submit"))
         {
+            beep.Play();
             buttonFill.SetActive(true);
             enterPlanet = true;
             SceneManager.LoadScene(scene);
