@@ -8,11 +8,13 @@ public class SpicyText : MonoBehaviour
     public string fullText1;
     public string fullText2;
     public string fullText3;
-    public GameObject square;
     public TextMeshPro skip;
     public GameObject x;
     public TextMeshPro continueTxt;
-    
+
+    public GameObject alienSpeech;
+    public BarterBox barterBox;  // Reference to BarterBox script
+
     private bool isSkipping = false;
     private bool isTextFullyRevealed = false;
     private int dialogueIndex = 0;
@@ -27,16 +29,13 @@ public class SpicyText : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Submit"))
         {
             if (!isTextFullyRevealed)
             {
                 SkipText();
             }
-        }
-        else if (Input.GetButtonDown("Submit"))
-        {
-            if (isTextFullyRevealed)
+            else
             {
                 ContinueDialogue();
             }
@@ -57,6 +56,10 @@ public class SpicyText : MonoBehaviour
             dialogueIndex++;
             ResetUI();
             StartCoroutine(RevealText(dialogues[dialogueIndex]));
+        }
+        else
+        {
+            SlideInBarterBox();
         }
     }
 
@@ -84,8 +87,6 @@ public class SpicyText : MonoBehaviour
     {
         isTextFullyRevealed = true;
         skip.text = "";
-        square.SetActive(false);
-        x.SetActive(true);
         continueTxt.text = "CONTINUE";
     }
 
@@ -94,8 +95,12 @@ public class SpicyText : MonoBehaviour
         tmp.text = "";
         isTextFullyRevealed = false;
         skip.text = "SKIP";
-        square.SetActive(true);
-        x.SetActive(false);
         continueTxt.text = "";
+    }
+
+    private void SlideInBarterBox()
+    {
+        barterBox.StartCoroutine(barterBox.SlideInBarterBox());
+        alienSpeech.SetActive(false);
     }
 }

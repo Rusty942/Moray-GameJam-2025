@@ -1,23 +1,33 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpriteZoomer : MonoBehaviour
 {
     [Header("Sprites and Settings")]
-    public GameObject[] sprites; // Assign your sprite GameObjects here
-    public float[] zoomDurations; // Individual zoom durations for each sprite
-    public float zoomAmount = 1.5f; // Scale multiplier during zoom
+    public GameObject[] sprites;
+    public float[] zoomDurations;
+    public float zoomAmount = 1.5f;
+    public string sceneToLoad;
 
     private void Start()
     {
-        // Ensure all sprites are inactive at the start
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         foreach (var sprite in sprites)
         {
             sprite.SetActive(false);
         }
 
-        // Start the sprite display coroutine
         StartCoroutine(DisplaySprites());
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 
     private IEnumerator DisplaySprites()
@@ -40,15 +50,17 @@ public class SpriteZoomer : MonoBehaviour
                 yield return null;
             }
 
-            // Ensure it reaches the target scale exactly
             sprite.transform.localScale = targetScale;
 
-            // Pause for a moment before hiding
             yield return new WaitForSeconds(0.5f);
 
-            // Reset and deactivate the sprite
             sprite.transform.localScale = originalScale;
             sprite.SetActive(false);
+        }
+
+        if (!string.IsNullOrEmpty(sceneToLoad))
+        {
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }

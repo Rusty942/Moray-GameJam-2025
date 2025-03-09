@@ -16,7 +16,7 @@ public class ShipFuel : MonoBehaviour
 
     private void Start()
     {
-        currentFuel = maxFuel;
+        currentFuel = StartData.fuelAmm;
         fuelBar.setMaxFuel(maxFuel);
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(ConsumeFuel());

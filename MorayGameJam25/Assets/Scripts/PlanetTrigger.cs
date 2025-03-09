@@ -7,6 +7,8 @@ public class PlanetTrigger : MonoBehaviour
     private bool enterPlanet = false;
     public GameObject buttonFill;
     public string scene;
+    public GameObject player;
+    public ShipFuel shipFuel;
 
     private void Start()
     {
@@ -19,6 +21,8 @@ public class PlanetTrigger : MonoBehaviour
             buttonFill.SetActive(true);
             enterPlanet = true;
             SceneManager.LoadScene(scene);
+            StartData.playerSpawnLocation = player.transform.position;
+            StartData.fuelAmm = StartData.fuelAmm = shipFuel.currentFuel;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

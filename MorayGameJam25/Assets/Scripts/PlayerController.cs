@@ -18,6 +18,7 @@ public class SpaceshipController : MonoBehaviour
         rb.drag = 0;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        transform.position = StartData.playerSpawnLocation;
     }
 
     void Update()
